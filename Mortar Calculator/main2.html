@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 
 <head>
     <meta charset='utf-8'>
@@ -11,7 +11,7 @@
         padding: 0;
         text-align: center;
         font-family: sans-serif;
-        background-image: linear-gradient(120deg, #ff6b6b, #5f27cd);
+        background-image: linear-gradient(135deg, #ff6b6b, #5f27cd);
         min-height: 100vh;
     }
 
@@ -91,11 +91,11 @@
     #lol {
         color: #fff;
         font-family: inherit;
-        font-size: 14px;
+        font-family: 14px;
         margin-top: 10px;
         border: none;
         color: #fff;
-        background-image: linear-gradient(135deg, #6bff9c, #5f27cd);
+        background-image: linear-gradient(135deg, #ff6b6b, #5f27cd);
         width: 150px;
         padding: 10px;
         border-radius: 30px;
@@ -110,15 +110,14 @@
     }
 </style>
 <script type="text/javascript">
-
     function DEGREE() {
         function toDegree(angle) {
             return angle * (180 / Math.PI);
         }
-        var velocity = document.getElementById('velocity').value;
-        var distance = document.getElementById('distance').value;
-        var degree = toDegree(Math.asin((distance * 9.81) / velocity ** 2)) / 2;
-        var degreeA = (degree.toFixed(4));
+        var velocity = document.getElementById("velocity").value;
+        var distance = document.getElementById("distance").value;
+        var degree = toDegree(Math.asin((distance * 9.81) / velocity**2)) / 2;
+        var degreeA = (degree.toFixed(3));
 
         document.getElementById("result").innerHTML = "Your degree is " + degreeA + "°";
     }
